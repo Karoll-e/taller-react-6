@@ -14,7 +14,7 @@ function App() {
       <div className="min-h-screen flex flex-col">
         <BrowserRouter>
           <NavBar />
-          <main className="">
+          <main className="relative isolate px-6 pt-14 lg:px-8">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
