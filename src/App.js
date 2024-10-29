@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
+import ContadorHooks from "./components/ContadorHooks";
 
 function App() {
   return (
@@ -13,11 +14,11 @@ function App() {
       <div className="min-h-screen flex flex-col">
         <BrowserRouter>
           <NavBar />
-          <main className="">
+          <main className="relative isolate px-6 pt-14 lg:px-8">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/hooks-counter" element={""} />
+              <Route path="/hooks-counter" element={<ContadorHooks/>} />
               <Route path="/redux-counter" element={""} />
               <Route path="/theme" element={""} />
               <Route path="/test-button" element={""} />
