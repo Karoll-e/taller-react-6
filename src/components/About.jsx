@@ -1,5 +1,4 @@
-import imageAbout from "../assets/image-about.png";
-import imageAbout2 from "../assets/image-about-2.png";
+import useThemeStyles from "./customHooks/useThemeStyles";
 
 const links = [
   { name: "Hooks", href: "/hooks-counter" },
@@ -9,13 +8,16 @@ const links = [
 ];
 
 function About() {
+  const { textPrimary, textSecondary} = useThemeStyles();
+
+  
   return (
     <div className="mx-auto max-w-2xl py-16 sm:py-24 lg:py-32">
       <div className=" text-center max-w-2xl lg:mx-0">
-        <h2 className="text-xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
+        <h2 className={`text-xl font-semibold tracking-tight sm:text-7xl ${textPrimary}`}>
           Taller N° 6 de React
         </h2>
-        <p className="mt-6 text-lg  text-gray-600 sm:text-xl">
+        <p className={`mt-6 text-lg  sm:text-xl ${textSecondary}`}>
           Este taller de React aborda los conceptos fundamentales del desarrollo
           de aplicaciones web con React, comenzando con el enrutamiento mediante
           React Router para la navegación entre diferentes vistas, seguido por
