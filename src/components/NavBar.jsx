@@ -1,22 +1,24 @@
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
-import { Menu, X, Sun, Moon} from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 import logo from "../assets/logo.png";
 import { useTheme } from "./ThemeContext";
 import useThemeStyles from "./customHooks/useThemeStyles";
 
 function NavBar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { toggleTheme, isToggleDark } = useTheme();
-  const { textPrimary, textSecondary, isActiveNavLink, isNotActiveNavLink, navBarLinkHover } = useThemeStyles();
+  const {
+    textPrimary,
+    textSecondary,
+    isActiveNavLink,
+    isNotActiveNavLink,
+    navBarLinkHover,
+  } = useThemeStyles();
 
   const navigation = [
     { name: "Inicio", path: "/" },
     { name: "Sobre Nosotros", path: "/about" },
     { name: "Contador Hooks", path: "/hooks-counter" },
     { name: "Contador Redux", path: "/redux-counter" },
-    { name: "Tema", path: "/theme" },
-    { name: "Boton Test", path: "/test-button" },
   ];
 
   return (
@@ -55,7 +57,11 @@ function NavBar() {
             className={`rounded-md p-2 ${textSecondary} ${navBarLinkHover}`}
             onClick={toggleTheme}
           >
-            {isToggleDark ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+            {isToggleDark ? (
+              <Moon className="h-5 w-5" />
+            ) : (
+              <Sun className="h-5 w-5" />
+            )}
             <span className="sr-only">Toggle theme</span>
           </button>
         </div>

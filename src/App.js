@@ -4,8 +4,9 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
 import ContadorHooks from "./components/ContadorHooks";
-import { ThemeProvider, useTheme } from './components/ThemeContext'; 
+import { ThemeProvider, useTheme } from './components/ThemeContext';
 import CounterRedux from "./components/redux/CounterRedux";
+import BotonTesting from "./components/BotonTesting"
 
 function App() {
   return (
@@ -32,10 +33,9 @@ const ThemeWrapper = () => {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/hooks-counter" element={<ContadorHooks />} />
-              <Route path="/redux-counter" element={<CounterRedux/>} />
+              <Route path="/redux-counter" element={<CounterRedux />} />
               <Route path="/theme" element={""} />
-              <Route path="/test-button" element={""} />
-              <Route path="/login" element={""} />
+              <Route path="/test-button" element={<BotonTesting />} />
             </Routes>
           </main>
         </BrowserRouter>
