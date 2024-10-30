@@ -6,7 +6,7 @@ export default function useThemeStyles() {
   return {
     background: isDarkTheme ? "bg-neutral-950" : "bg-blue-50",
     textPrimary: isDarkTheme ? "text-gray-200" : "text-gray-900",
-    textSecondary: isDarkTheme ? "text-gray-400" : "text-gray-600",
+    textSecondary: isDarkTheme ? "text-gray-300" : "text-gray-600",
     linkPrimary: isDarkTheme
       ? "bg-blue-500 text-white hover:bg-blue-400"
       : "bg-blue-600 text-white hover:bg-blue-500",

@@ -3,8 +3,7 @@ import useThemeStyles from "./customHooks/useThemeStyles";
 const links = [
   { name: "Hooks", href: "/hooks-counter" },
   { name: "Redux", href: "/redux-counter" },
-  { name: "Contexto global", href: "/theme" },
-  { name: "Testing", href: "/test-button" },
+  { name: "Contexto global", href: "" },
 ];
 
 function About() {

@@ -40,7 +40,7 @@ function NavBar() {
               className={({ isActive }) =>
                 `text-sm font-semibold leading-6 ${
                   isActive
-                    ? `${isActiveNavLink} `
+                    ? `${isActiveNavLink}`
                     : `${isNotActiveNavLink} hover:${navBarLinkHover}`
                 }`
               }
